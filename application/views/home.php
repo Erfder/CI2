@@ -3,8 +3,8 @@
 	<section class="home">
 		<strong>Returning user</strong>
 		<form>
-			<input type="text"/>
-			<input type="password"/>
+			<label for="useri">Username: </label><input type="text" id="useri" name="user"/><br>
+			<label for="passi">Password: </label><input type="password" id="passi" name="pass"/>
 			<br>
 			<input type="submit" name="Login" value="Login" class="button"/>
 		</form>

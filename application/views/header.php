@@ -107,6 +107,9 @@
 	    		padding: 5px;
 	    		margin-top: 20px;
 	    	}
+	    	label{
+	    		margin-right: 5px; 
+	    	}
         </style>
 </head>
 <body>
