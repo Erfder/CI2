@@ -26,7 +26,8 @@ class Welcome extends CI_Controller {
         $data['title'] = $news;
 		//$data['title'] = "hi";
 		$this->load->view('header');
-		$this->load->view('view1', $data);
+		$this->load->view('home');
+		//$this->load->view('view1', $data);
 		$this->load->view('footer'); //do 'view1', data) to use the commented line
 	}
 }

@@ -21,8 +21,9 @@
 	    		top: 0;
 	    		left: 0;
 	    		padding: 10px;
-	    		font-family: 'Amatic SC', cursive;
+	    		font-family: 'PT Serif', serif;
 	    		font-weight: 700;
+	    		font-size: 25px;
 	    	}
 	    	footer{
 	    		background-color: #2e221f;
@@ -37,6 +38,7 @@
 	    		width: 80%;
 	    		margin: auto;
 	    		margin-top: 60px;
+	    		min-height: 500px;
 	    	}
 	    	p{
 	    		padding-left: 10px;
@@ -74,8 +76,6 @@
 	    	}
 	    	section:nth-of-type(2)>#imgcont{
 	    		width: 60%;
-	    		background: black;
-	    		padding: 5px;
 	    	}
 	    	section{
 	    		width: 100%;
@@ -89,3 +89,6 @@
         </style>
 </head>
 <body>
+	<header>
+		Site Name
+	</header>	
