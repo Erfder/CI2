@@ -41,7 +41,7 @@
 	    	p{
 	    		padding-left: 10px;
 	    	}
-	    	p:nth-child(1){
+	    	h1{
 	    		background-color: #58351a;
 	    		color: white;
 	    		padding: 5px;
@@ -50,7 +50,41 @@
 	    		text-align: center;
 	    		font-size: 30px;
 	    		margin-top: 0;
-
+	    	}
+	    	h2{
+	    		background-color: #58351a;
+	    		color: white;
+	    		padding: 5px;
+	    		font-family: 'Amatic SC', cursive;
+	    		font-weight: 400;
+	    		text-align: center;
+	    		font-size: 20px;
+	    		margin-top: 10px;
+	    	}
+	    	#imgcont{
+	    		width: 40%;
+	    		background: black;
+	    		padding: 5px;
+	    		float: left;
+	    		min-height: 100px;
+	    		margin-right: 10px;
+	    		margin-left: 10px;
+	    		display: flex;
+	    		align-items: center;
+	    	}
+	    	section:nth-of-type(2)>#imgcont{
+	    		width: 60%;
+	    		background: black;
+	    		padding: 5px;
+	    	}
+	    	section{
+	    		width: 100%;
+	    	}
+	    	#clearfix{
+	    		clear: both;
+	    	}
+	    	img{
+	    		width: 100%;
 	    	}
         </style>
 </head>
