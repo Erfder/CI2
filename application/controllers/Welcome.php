@@ -21,12 +21,12 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-			$this->load->model('model1');
-            $news = $this->model1->get_news();
-            $data['title'] = $news['title'];
+		$this->load->model('model1');
+        $news = $this->model1->get_news();
+        $data['title'] = $news;
 		//$data['title'] = "hi";
 		$this->load->view('header');
-		$this->load->view('view1');
+		$this->load->view('view1', $data);
 		$this->load->view('footer'); //do 'view1', data) to use the commented line
 	}
 }

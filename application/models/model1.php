@@ -1,14 +1,9 @@
 <?php 
-class News_model extends CI_Model {
-
-	public function __construct()	{
-		$this->load->database(); 
-		
-	}
+class model1 extends CI_Model {
 	public function get_news() {
-		  $query = $this->db->query('SELECT slug, title, id FROM news');
-		  $queryret = "lmno";
-		  return $queryret;
+  		$this->load->database(); 
+		$query = $this->db->get_where('news', array('id' => 1));
+		return $query->row_array();
 	}
 }
 ?>
