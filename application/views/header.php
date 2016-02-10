@@ -86,6 +86,27 @@
 	    	img{
 	    		width: 100%;
 	    	}
+	    	.home{
+	    		width: 45%;
+	    		float: left;
+	    		margin-left: 4%;
+	    		min-height: 300px;
+	    		text-align: center;
+	    	}
+	    	.home:first-of-type{
+	    		border-right: 1px solid #2e221f;
+	    	}
+	    	form{
+	    		margin-top: 20px;
+	    	}
+	    	.button{
+	    		border: none;
+	    		background-color: #58351a;
+	    		color: white;
+	    		width: 80px;
+	    		padding: 5px;
+	    		margin-top: 20px;
+	    	}
         </style>
 </head>
 <body>
