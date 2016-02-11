@@ -62,6 +62,11 @@
 	    		text-align: center;
 	    		font-size: 20px;
 	    		margin-top: 10px;
+	    		margin-bottom: 0;
+	    	}
+	    	h4{
+	    		text-align: center;
+	    		font-size: 30px;
 	    	}
 	    	#imgcont{
 	    		width: 40%;
@@ -96,6 +101,9 @@
 	    	.home:first-of-type{
 	    		border-right: 1px solid #2e221f;
 	    	}
+	    	article{
+	    		border: 1px solid #2e221f;
+	    	}
 	    	form{
 	    		margin-top: 20px;
 	    	}
@@ -125,6 +133,7 @@
 	    	a{
 	    		text-decoration: none;
 	    		color: inherit;
+	    		font-weight: 600;
 	    	}
         </style>
 </head>
@@ -132,7 +141,7 @@
 	<header>
 		<?php 
 		if (isset($_SESSION['session_data'])) {
-			echo anchor('Control', 'Logged in ');
+			echo anchor('View', 'Site Name ');
 		}else{
 			echo anchor('Welcome', 'Home screen ');
 		}
