@@ -110,9 +110,15 @@
 	    	label{
 	    		margin-right: 5px; 
 	    	}
+	    	span{
+	    		float: right;
+	    		font-size: 10px;
+	    		position: relative;
+	    		right: 20px;
+	    	}
         </style>
 </head>
 <body>
 	<header>
-		Site Name
+		Site Name <span><?php echo "Hello, ".$title['username']." "; ?></span>
 	</header>	

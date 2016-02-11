@@ -26,13 +26,13 @@ class logged extends CI_Controller {
 		'pass' => $this->input->post('password')
 		);
 		$this->load->model('model2');
-        $fields = $this->model2->validatelogin($user_name);
+        $fields = $this->model2->validatelogin($data['user_name']);
         $data2['title'] = $fields;
         //
 
 		//$data['title'] = "hi";
-		$this->load->view('header');
-		$this->load->view('view1', $data, $data2);
+		$this->load->view('header', $data2);
+		$this->load->view('view1', $data2);
 		//$this->load->view('view1', $data);
 		$this->load->view('footer'); //do 'view1', data) to use the commented line
 	}
