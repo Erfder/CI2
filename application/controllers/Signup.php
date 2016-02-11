@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Logged extends CI_Controller {
+class Signup extends CI_Controller {
 
 	/*
 	 * Index Page for this controller.
@@ -40,7 +40,7 @@ class Logged extends CI_Controller {
 		);
 		$this->session->set_userdata('session_data', $sess_array);
 		//
-		$this->load->view('header');
+		$this->load->view('header', $data2);
 		$this->load->view('view1', $data2);
 		//$this->load->view('view1', $data);
 		$this->load->view('footer'); //do 'view1', data) to use the commented line

@@ -1,10 +1,8 @@
 <div id="brown">
-	<h1>Start viewing art today!</h1>
-	<section class="home">
-		<strong>Returning user</strong>
-
+	<h1>Thank you for signing up!</h1>
+	<h2>Please take a moment to fill out the form, and your account will be on the way!</h2>
 		<?php $this->load->helper('form');
-		echo form_open('logged'); 
+		echo form_open('Welcome'); 
 			echo form_label('User Name :', 'u_name');
 			$data= array(
 				'name' => 'u_name',
@@ -30,9 +28,4 @@
 			</div>
 
 		<?php echo form_close(); ?>
-	</section>
-	<section class="home">
-		<strong>New User</strong>
-		<p>Sign up is free and easy. Click here to create your account and sign up now.</p>
-	</section>
 </div>
