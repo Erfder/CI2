@@ -1,7 +1,5 @@
-
 <div id="brown">
-<h1><?php echo $title['username']; ?></h1>
-
+<h1><?php echo $pass; echo $user_name; ?></h1>
 <section>
 	<div id="imgcont">
 		<img src="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg" alt="image 1">
@@ -20,10 +18,10 @@
 	<div id="clearfix"></div>
 </section>
 
-<h2><?php echo $title['contactinfo']; ?></h2>
+<h2><?php //echo $title['contactinfo']; ?></h2>
 </div>
 
-<?php print_r($title); ?>
+<?php //print_r($title); ?>
 
 
 <p>hi database should be above this line</p><p>hi</p><p>hi</p><p>hi</p><p>hi</p><p>hi</p>

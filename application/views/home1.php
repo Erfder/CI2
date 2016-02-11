@@ -2,12 +2,33 @@
 	<h1>Start viewing art today!</h1>
 	<section class="home">
 		<strong>Returning user</strong>
-		<form action="application/controllers/logged.php" method="post">
-			<label for="useri">Username: </label><input type="text" id="useri" name="username"/><br>
-			<label for="passi">Password: </label><input type="password" id="passi" name="password"/>
-			<br>
-			<input type="submit" name="Login" value="Login" class="button"/>
-		</form>
+
+		<?php $this->load->helper('form');
+		echo form_open('logged'); 
+			echo form_label('User Name :', 'u_name');
+			$data= array(
+				'name' => 'u_name',
+				'placeholder' => 'Please Enter Username',
+			);
+			echo form_input($data);
+	
+			echo form_label('Password:', 'password');
+			$data= array(
+				'type' => 'password',
+				'name' => 'password',
+			);
+			echo form_input($data);?>
+
+			<div>
+			<?php $data = array(
+				'type' => 'submit',
+				'value'=> 'Submit',
+				'class'=> 'button'
+			);
+			echo form_submit($data); ?>
+			</div>
+
+		<?php echo form_close(); ?>
 	</section>
 	<section class="home">
 		<strong>New User</strong>
