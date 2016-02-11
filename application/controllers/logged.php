@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class logged extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -21,9 +21,9 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->model('model1');
-        $news = $this->model1->get_news();
-        $data['title'] = $news;
+		$this->load->model('model2');
+        $fields = $this->model1->validatelogin();
+        $data['info'] = $fields;
 		//$data['title'] = "hi";
 		$this->load->view('header');
 		$this->load->view('home1');

@@ -2,7 +2,8 @@
 	<h1>Start viewing art today!</h1>
 	<section class="home">
 		<strong>Returning user</strong>
-		<form>
+		<?php echo validation_errors(); ?>
+		<?php echo form_open('logged'); ?>
 			<label for="useri">Username: </label><input type="text" id="useri" name="user"/><br>
 			<label for="passi">Password: </label><input type="password" id="passi" name="pass"/>
 			<br>
