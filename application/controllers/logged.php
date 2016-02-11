@@ -22,11 +22,11 @@ class logged extends CI_Controller {
 	public function index()
 	{
 		$this->load->model('model2');
-        $fields = $this->model1->validatelogin();
-        $data['info'] = $fields;
+        $fields = $this->model2->validatelogin();
+        $data['title'] = $fields;
 		//$data['title'] = "hi";
 		$this->load->view('header');
-		$this->load->view('home1');
+		$this->load->view('view1', $data);
 		//$this->load->view('view1', $data);
 		$this->load->view('footer'); //do 'view1', data) to use the commented line
 	}

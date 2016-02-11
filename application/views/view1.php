@@ -1,6 +1,6 @@
 
 <div id="brown">
-<h1>Artist name goes here</h1>
+<h1><?php echo $title['username']; ?></h1>
 
 <section>
 	<div id="imgcont">
@@ -20,7 +20,7 @@
 	<div id="clearfix"></div>
 </section>
 
-<h2>contact info goes here</h2>
+<h2><?php echo $title['contactinfo']; ?></h2>
 </div>
 
 <?php print_r($title); ?>
