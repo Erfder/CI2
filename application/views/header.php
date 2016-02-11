@@ -109,14 +109,22 @@
 	    		margin-left: 10px;
 	    	}
 	    	label{
-	    		margin-right: 5px; 
 	    		margin-left: 10px;
+	    	}
+	    	input{
+	    		margin-left: 5px;
 	    	}
 	    	span{
 	    		float: right;
 	    		font-size: 10px;
 	    		position: relative;
 	    		right: 20px;
+	    		top: -3px;
+	    		text-align: right;
+	    	}
+	    	a{
+	    		text-decoration: none;
+	    		color: white;
 	    	}
         </style>
 </head>
@@ -124,7 +132,9 @@
 	<header>
 		Site Name <span><?php 
 		if (isset($_SESSION['session_data'])) {
-			echo "Hello, ".$_SESSION['session_data']['Username']." "; 
+			echo "Hello, ".$_SESSION['session_data']['Username']."<br>"; 
+			echo anchor('Control', 'My Account '); echo "<br>";
+			echo anchor('', 'Logout');
 		}else{
 			echo " ";
 		}

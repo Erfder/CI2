@@ -18,16 +18,15 @@
 				'type' => 'password',
 				'name' => 'password',
 			);
-			echo form_input($data);?>
+			echo form_input($data);
 
-			<div>
-			<?php $data = array(
+			$data = array(
 				'type' => 'submit',
 				'value'=> 'Submit',
 				'class'=> 'button'
 			);
 			echo form_submit($data); ?>
-			</div>
+			
 
 		<?php echo form_close(); ?>
 	</section>

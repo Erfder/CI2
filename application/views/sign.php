@@ -41,15 +41,14 @@
 
 			echo "<br>";
 //---------------------------------------
-?>
-			<div>
-			<?php $data = array(
+
+			$data = array(
 				'type' => 'submit',
 				'value'=> 'Submit',
 				'class'=> 'button'
 			);
 			echo form_submit($data); ?>
-			</div>
+			
 
 		<?php echo form_close(); ?>
 		<h2>When you're finished, just login!</h2>
