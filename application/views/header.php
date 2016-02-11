@@ -124,13 +124,22 @@
 	    	}
 	    	a{
 	    		text-decoration: none;
-	    		color: white;
+	    		color: inherit;
 	    	}
         </style>
 </head>
 <body>
 	<header>
-		Site Name <span><?php 
+		<?php 
+		if (isset($_SESSION['session_data'])) {
+			echo anchor('Control', 'Logged in ');
+		}else{
+			echo anchor('Welcome', 'Home screen ');
+		}
+		
+		?>
+
+		<span><?php 
 		if (isset($_SESSION['session_data'])) {
 			echo "Hello, ".$_SESSION['session_data']['Username']."<br>"; 
 			echo anchor('Control', 'My Account '); echo "<br>";

@@ -24,6 +24,6 @@
 <?php print_r($_SESSION); ?>
 
 
-<p>hi database should be above this line</p><?php echo anchor('', 'Logout');?><p>hi</p><p>hi</p><p>hi</p><p>hi</p><p>hi</p>
+<p>hi database should be above this line</p><p>hi</p><p>hi</p><p>hi</p><p>hi</p><p>hi</p>
 
 
