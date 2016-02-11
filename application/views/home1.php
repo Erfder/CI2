@@ -33,6 +33,6 @@
 	</section>
 	<section class="home">
 		<strong>New User</strong>
-		<p>Sign up is free and easy. Click here to create your account and sign up now.</p>
+		<p>Sign up is free and easy. Click <?php echo anchor('Signup', 'here');?> to create your account and sign up now.</p>
 	</section>
 </div>

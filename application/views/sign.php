@@ -52,4 +52,6 @@
 			</div>
 
 		<?php echo form_close(); ?>
+		<h2>When you're finished, just login!</h2>
+		<p>ps I know this form is missing a lot of crucial elements like a confirm password and captcha. For now, I'm just trying to get the assignment done on time.
 </div>

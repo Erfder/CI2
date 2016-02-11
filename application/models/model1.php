@@ -1,9 +1,13 @@
 <?php 
 class Model1 extends CI_Model {
-	public function get_news() {
+	public function signup($data) {
   		$this->load->database(); 
-		$query = $this->db->get_where('news', array('id' => 1));
-		return $query->row_array();
+  		if ($this->db->get_where('users', array('username' => $data['username']))->num_rows() > 0) {
+  			$this->load->helper('url');
+			redirect('Signup', 'refresh'); //change to an error page later
+  		}else{
+			$this->db->insert('users', $data);
+		}
 	}
 }
 ?>

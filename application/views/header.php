@@ -106,9 +106,11 @@
 	    		width: 80px;
 	    		padding: 5px;
 	    		margin-top: 20px;
+	    		margin-left: 10px;
 	    	}
 	    	label{
 	    		margin-right: 5px; 
+	    		margin-left: 10px;
 	    	}
 	    	span{
 	    		float: right;

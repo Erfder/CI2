@@ -21,6 +21,7 @@ class Welcome extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->helper('form');
+		$this->load->helper('url');
 		$this->load->library('session');
 		$this->load->library('form_validation');
 	}
@@ -33,13 +34,27 @@ class Welcome extends CI_Controller {
 		);
 		$this->session->unset_userdata('session_data', $sess_array);
 
-		$this->load->model('model1');
-        $news = $this->model1->get_news();
-        $data['title'] = $news;
-		//$data['title'] = "hi";
+		$dus = $this->input->post('su_name');
+		$dpas = $this->input->post('spassword');
+		$dem = $this->input->post('ema');
+		$dpho = $this->input->post('pho');
+		$dco = $dem . " " . $dpho;
+
+		$data = array(
+		'username' => $dus,
+		'password' => $dpas,
+		'contactinfo' => $dco
+		);
+		if ($this->input->post('su_name') == false) {
+			echo "Nothing submitted.";
+		}else{
+			$this->load->model('model1');
+	        $news = $this->model1->signup($data);
+	        $data['title'] = $news;
+    	}
+
 		$this->load->view('header');
 		$this->load->view('home1');
-		//$this->load->view('view1', $data);
-		$this->load->view('footer'); //do 'view1', data) to use the commented line
+		$this->load->view('footer'); 
 	}
 }
