@@ -18,9 +18,21 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	public function __construct() {
+		parent::__construct();
+		$this->load->helper('form');
+		$this->load->library('session');
+		$this->load->library('form_validation');
+	}
+
 
 	public function index()
 	{
+		$sess_array = array(
+			'set_value' => ''
+		);
+		$this->session->unset_userdata('session_data', $sess_array);
+
 		$this->load->model('model1');
         $news = $this->model1->get_news();
         $data['title'] = $news;

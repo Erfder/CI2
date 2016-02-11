@@ -21,7 +21,7 @@
 <h2><?php echo $title['contactinfo']; ?></h2>
 </div>
 
-<?php //print_r($title); ?>
+<?php print_r($_SESSION); ?>
 
 
 <p>hi database should be above this line</p><?php echo anchor('', 'Logout');?><p>hi</p><p>hi</p><p>hi</p><p>hi</p><p>hi</p>

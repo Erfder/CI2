@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class logged extends CI_Controller {
 
-	/**
+	/*
 	 * Index Page for this controller.
 	 *
 	 * Maps to the following URL
@@ -18,7 +18,13 @@ class logged extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-// When user submit data on view page, Then this function store data in array.
+	public function __construct() {
+		parent::__construct();
+		$this->load->helper('form');
+		$this->load->library('session');
+		$this->load->library('form_validation');
+	}
+		
 
 	public function index(){
 		$data = array(
@@ -26,11 +32,14 @@ class logged extends CI_Controller {
 		'pass' => $this->input->post('password')
 		);
 		$this->load->model('model2');
-        $fields = $this->model2->validatelogin($data['user_name']);
+        $fields = $this->model2->validatelogin($data['user_name'], $data['pass']);
         $data2['title'] = $fields;
         //
-
-		//$data['title'] = "hi";
+        $sess_array = array(
+		'Username' => $this->input->post('u_name')
+		);
+		$this->session->set_userdata('session_data', $sess_array);
+		//
 		$this->load->view('header', $data2);
 		$this->load->view('view1', $data2);
 		//$this->load->view('view1', $data);

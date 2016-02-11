@@ -120,5 +120,19 @@
 </head>
 <body>
 	<header>
-		Site Name <span><?php echo "Hello, ".$title['username']." "; ?></span>
+		Site Name <span><?php 
+		if (isset($_SESSION['session_data'])) {
+			echo "Hello, ".$_SESSION['session_data']['Username']." "; 
+		}else{
+			echo " ";
+		}
+		
+		?></span>
 	</header>	
+
+
+
+
+
+
+
