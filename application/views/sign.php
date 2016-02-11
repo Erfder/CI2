@@ -3,21 +3,45 @@
 	<h2>Please take a moment to fill out the form, and your account will be on the way!</h2>
 		<?php $this->load->helper('form');
 		echo form_open('Welcome'); 
-			echo form_label('User Name :', 'u_name');
+			echo form_label('Desired user Name:', 'su_name');
 			$data= array(
-				'name' => 'u_name',
+				'name' => 'su_name',
+				'required' => 'required'
 			);
 			echo form_input($data);
 
 			echo "<br>";
-	
-			echo form_label('Password:', 'password');
+//---------------------------------------	
+			echo form_label('Password:', 'spassword');
 			$data= array(
 				'type' => 'password',
-				'name' => 'password',
+				'name' => 'spassword',
+				'required' => 'required'
 			);
-			echo form_input($data);?>
+			echo form_input($data);
 
+			echo "<br>";
+//---------------------------------------
+			echo form_label('Email:', 'ema');
+			$data= array(
+				'type' => 'email',
+				'name' => 'ema',
+				'required' => 'required'
+			);
+			echo form_input($data);
+
+			echo "<br>";
+//---------------------------------------
+			echo form_label('Phone (optional):', 'pho');
+			$data= array(
+				'type' => 'tel',
+				'name' => 'pho',
+			);
+			echo form_input($data);
+
+			echo "<br>";
+//---------------------------------------
+?>
 			<div>
 			<?php $data = array(
 				'type' => 'submit',
