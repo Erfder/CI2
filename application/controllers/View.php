@@ -9,7 +9,7 @@ class View extends CI_Controller {
 	}
 
 	public function index(){
-		//
+		$this->load->model('model3');
 		$this->load->view('header');
 		$this->load->view('view1');
 		$this->load->view('footer'); 
