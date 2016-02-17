@@ -15,7 +15,13 @@
 
 <section>
 	<div id="imgcont">
-		<img src="http://pre14.deviantart.net/598f/th/pre/f/2013/144/f/c/fancy_feonix_by_tatchit-d66d19m.png" alt="image 2">
+		<?php 
+		$this->load->database(); 
+		$this->db->limit(1);
+		$imageinf = $this->db->get_where('image', array('userid' => $userinf['userid']))->row_array();
+		echo "<img src='".$imageinf['source']."' alt='image 1'>";
+
+ ?>
 	</div>
 	<h3>Title of work 2 goes here</h3>
 	<p>Description 2 goes here</p>

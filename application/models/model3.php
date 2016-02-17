@@ -1,7 +1,6 @@
 <?php 
 class Model3 extends CI_Model {
 	public function getrando() {
-		$this->load->helper('string');
   		$this->load->database(); 
 
   		$this->db->select('userid');
