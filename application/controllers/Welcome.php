@@ -26,7 +26,7 @@ class Welcome extends CI_Controller {
 		$this->load->library('form_validation');
 	}
 
-
+//---------------------------------------------------For the love of god do not forget to route this page from the signup!
 	public function index()
 	{
 		$sess_array = array(

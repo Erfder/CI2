@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Logged extends CI_Controller {
 
-	/*
+	/*---------------------------------------------------For the love of god do not forget to route this page!
 	 * Index Page for this controller.
 	 *
 	 * Maps to the following URL
@@ -21,6 +21,7 @@ class Logged extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->helper('form');
+		$this->load->helper('url');
 		$this->load->library('session');
 		$this->load->library('form_validation');
 	}

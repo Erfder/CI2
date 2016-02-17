@@ -12,7 +12,7 @@ class Control extends CI_Controller {
 	}
 
 	public function index(){
-		//
+		//---------------------------------------------------For the love of god do not forget to route this page!
 
 		if(isset($_POST['beamSword'])){ 
 			$screwAttack = $_FILES['asdf']['tmp_name'];
