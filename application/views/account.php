@@ -19,6 +19,20 @@ echo form_open_multipart('Control');
 		);
 		echo form_input($data);
 		echo "<br>";
+
+	echo form_label('Description:', 'descr');
+		$data= array(
+			'name' => 'descr',
+		);
+		echo form_input($data);
+		echo "<br>";
+
+	echo form_label('Media:', 'medi');
+		$data= array(
+			'name' => 'medi',
+		);
+		echo form_input($data);
+		echo "<br>";
 	
 	$data = array(
 		'name' => 'beamSword',
