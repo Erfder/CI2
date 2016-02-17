@@ -1,8 +1,8 @@
 <div id="brown">
 	<h4>Featured Pieces</h4>
 <article>
-<h1><?php //echo $title['username'];
-	echo "Erfder";
+<h1><?php echo $userinf['username'];
+	//echo "Erfder";
  ?></h1>
 <section>
 	<div id="imgcont">
@@ -22,8 +22,8 @@
 	<div id="clearfix"></div>
 </section>
 
-<h2><?php //echo $title['contactinfo']; Changing this later. Same for above.
-	echo "Email: super@hero.org";
+<h2><?php echo $userinf['contactinfo'];
+	//echo "Email: super@hero.org";
 ?></h2>
 </article>
 
