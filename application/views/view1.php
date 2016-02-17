@@ -19,22 +19,22 @@
 		$this->db->limit(1);
 		$imageinf = $this->db->get_where('image', array('userid' => $userinf['userid']))->row_array();
 		echo "<img src='".$imageinf['source']."' alt='image 1'>";
-
  ?>
 	</div>
-	<h3>Title of work 2 goes here</h3>
-	<p>Description 2 goes here</p>
+	<?php 
+		echo "<h3>".$imageinf['title']."</h3>";
+		echo "<p>".$imageinf['desc']."</p>";
+	?>
 	<div id="clearfix"></div>
 </section>
 
 <h2><?php echo $userinf['contactinfo'];
-	//echo "Email: super@hero.org";
 ?></h2>
 </article>
 
 </div>
 
-<?php print_r($userinf); ?>
+<?php //print_r($userinf); ?>
 
 
 <p>hi database should be above this line</p><p>hi</p><p>hi</p><p>hi</p><p>hi</p><p>hi</p>
