@@ -2,9 +2,8 @@
 	<h4>Featured Pieces</h4>
 <article>
 <h1><?php echo $userinf['username'];
-	//echo "Erfder";
  ?></h1>
-<section>
+<!---<section>
 	<div id="imgcont">
 		<img src="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg" alt="image 1">
 	</div>
@@ -12,7 +11,7 @@
 	<p>Description 1 goes here</p>
 	<div id="clearfix"></div>
 </section>
-
+-->
 <section>
 	<div id="imgcont">
 		<?php 
