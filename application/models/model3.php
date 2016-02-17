@@ -9,7 +9,8 @@ class Model3 extends CI_Model {
 		$this->db->limit(1);
 		$maxnu = $this->db->get('users');
 
-		$randomiz = rand(1, $maxnu);
+		$intmax = intval($maxnu);
+		$randomiz = rand(1, $intmax);
 
 		$query = $this->db->get_where('users', array('userid' => $randomiz));
 		return $query->row_array();

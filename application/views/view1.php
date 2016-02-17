@@ -29,7 +29,7 @@
 
 </div>
 
-<?php //print_r($_SESSION); ?>
+<?php print_r($userinf); ?>
 
 
 <p>hi database should be above this line</p><p>hi</p><p>hi</p><p>hi</p><p>hi</p><p>hi</p>
