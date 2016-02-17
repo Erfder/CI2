@@ -69,7 +69,8 @@
 	    		font-size: 30px;
 	    	}
 	    	#imgcont{
-	    		width: 40%;
+	    		max-width: 40%;
+	    		max-height: 300px;
 	    		background: black;
 	    		padding: 5px;
 	    		float: left;
@@ -89,7 +90,8 @@
 	    		clear: both;
 	    	}
 	    	img{
-	    		width: 100%;
+	    		max-width: 100%;
+	    		max-height: 300px;
 	    	}
 	    	.home{
 	    		width: 45%;
@@ -103,6 +105,9 @@
 	    	}
 	    	article{
 	    		border: 1px solid #2e221f;
+	    	}
+	    	article:not(:first-child){
+	    		margin-top: 50px;
 	    	}
 	    	form{
 	    		margin-top: 20px;

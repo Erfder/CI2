@@ -20,7 +20,7 @@ class Model3 extends CI_Model {
 		$this->db->order_by("image_id", "desc");
 		$this->db->limit(3);
 		$this->db->join('users', 'users.userid = image.userid');
-		$threerec = $this->db->get('image')->row_array();
+		$threerec = $this->db->get('image')->result_array();
 		return $threerec;
 
 	}
