@@ -1,5 +1,5 @@
 <div id="brown">
-	<h4>Featured Pieces</h4>
+	<h4>Featured Pieces <?php echo anchor('Vieworg', 'Recent ') ?></h4>
 <article>
 <h1><?php echo $userinf['username'];
  ?></h1>

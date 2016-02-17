@@ -14,5 +14,15 @@ class Model3 extends CI_Model {
 		return $query->row_array();
 
 	}
+	public function getrecent() {
+  		$this->load->database(); 
+
+		$this->db->order_by("image_id", "desc");
+		$this->db->limit(3);
+		$this->db->join('users', 'users.userid = image.userid');
+		$threerec = $this->db->get('image')->row_array();
+		return $threerec;
+
+	}
 }
 ?>
