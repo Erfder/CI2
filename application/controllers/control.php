@@ -21,6 +21,25 @@ class Control extends CI_Controller {
 			move_uploaded_file($screwAttack, $franklinBadge."/".$rabbitHood);
 			$superSpicyCurry = 1;
 			$data2['superSpicyCurry'] = $rabbitHood;
+
+			$dtitle = $this->input->post('ti');
+			$ddescription = $this->input->post('descr');
+			$dmedia = $this->input->post('medi');
+
+			$this->load->database();
+			$this->db->select('userid');
+			$did = $this->db->get_where('users', array('username' => $_SESSION['session_data']['Username']));
+
+			$dbdata = array(
+				'userid' => $did,
+				'source' => "http://localhost:8888/CI/Img/".$rabbitHood,
+				'title' => $dtitle,
+				'desc' => $ddescription,
+				'media' => $dmedia
+			);
+			
+			$this->db->insert('image', $dbdata);
+
 			$this->load->view('header');
 			$this->load->view('account', $data2);
 			$this->load->view('footer'); 
@@ -29,7 +48,6 @@ class Control extends CI_Controller {
 			$this->load->view('account');
 			$this->load->view('footer'); 
 		}
-
 		
 	}
 
