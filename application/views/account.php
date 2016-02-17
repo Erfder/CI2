@@ -3,15 +3,22 @@
 <p>Here is your account. At this time you may only upload images. Sorry about that.</p>
 	<?php $this->load->helper('form');
 echo form_open_multipart('Control'); 
-	echo form_label('Choose an image from your computer', 'asdf')."<br>";
-	$data= array(
-		'name' => 'asdf',
-		'type' => 'file',
-		'required' => 'required'
-	);
-	echo form_input($data);
 
-	echo "<br>";
+	echo form_label('Choose an image from your computer', 'asdf')."<br>";
+		$data= array(
+			'name' => 'asdf',
+			'type' => 'file',
+			'required' => 'required'
+		);
+		echo form_input($data);
+		echo "<br>";
+
+	echo form_label('Title:', 'ti');
+		$data= array(
+			'name' => 'ti',
+		);
+		echo form_input($data);
+		echo "<br>";
 	
 	$data = array(
 		'name' => 'beamSword',
@@ -19,7 +26,8 @@ echo form_open_multipart('Control');
 		'value'=> 'Submit',
 		'class'=> 'button'
 	);
-	echo form_submit($data); ?>
+	echo form_submit($data); 
+	?>
 	
 
 <?php echo form_close(); ?>

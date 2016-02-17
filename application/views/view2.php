@@ -3,7 +3,7 @@
 
 <article>
 <h1><?php 
-    echo $imginf[0]['title'];
+    echo $imginf[0]['username'];
  ?></h1>
 <section>
 	<div id="imgcont">
@@ -18,7 +18,7 @@
 
 <article>
 <h1><?php 
-    echo $imginf[1]['title'];
+    echo $imginf[1]['username'];
  ?></h1>
 <section>
 	<div id="imgcont">
@@ -33,7 +33,7 @@
 
 <article>
 <h1><?php 
-    echo $imginf[2]['title'];
+    echo $imginf[2]['username'];
  ?></h1>
 <section>
 	<div id="imgcont">
