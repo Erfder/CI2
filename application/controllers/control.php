@@ -41,6 +41,11 @@ class Control extends CI_Controller {
 			$this->load->view('header');
 			$this->load->view('account', $data2);
 			$this->load->view('footer'); 
+
+		}elseif (isset($_POST['rincrud'])) {
+			
+			
+			
 		}else{
 			$this->load->view('header');
 			$this->load->view('account');
