@@ -43,13 +43,18 @@ class Control extends CI_Controller {
 			$this->load->view('footer'); 
 
 		}elseif (isset($_POST['rincrud'])) {
+			$ntitle = $this->input->post('titl');
+			$ndescription = $this->input->post('des');
+			$nmedia = $this->input->post('me');
+			$id = post('iddd');
+
 			$this->load->model('model2');
 			$newinfo = array(
 				'title' => $ntitle,
 				'desc' => $ndescription,
 				'media' => $nmedia
 			);
-			$this->model2->update($newinfo);
+			$this->model2->update($newinfo, $id);
 			$data3 = $this->model2->getinf();
 
 			$this->load->view('header');

@@ -30,8 +30,10 @@ class Model2 extends CI_Model {
 		$did = $this->db->get_where('users', array('username' => $sessdat))->row_array();
 		return $did;
 	}
-	public function update($newdata){
-
+	public function update($newdata, $id){
+		$this->load->database();
+		$this->db->where('image_id', $id);
+		$this->db->update('image', $newdata);
 	}
 	public function getinf(){
 		$this->load->library('session');

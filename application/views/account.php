@@ -50,52 +50,10 @@ echo form_open_multipart('Control');
 	echo "<div style='width: 30%; margin: auto; background-color: #58351a; color: white;'>Successfully submitted " . $superSpicyCurry."</div>";
 }
 
-/*echo form_open_multipart('Control'); 
-
-	echo form_label('Edit Title', 'asdf')."<br>";
-		$data= array(
-			'name' => 'asdf',
-			'type' => 'file',
-			'required' => 'required'
-		);
-		echo form_input($data);
-		echo "<br>";
-
-	echo form_label('Title:', 'ti');
-		$data= array(
-			'name' => 'ti',
-		);
-		echo form_input($data);
-		echo "<br>";
-
-	echo form_label('Description:', 'descr');
-		$data= array(
-			'name' => 'descr',
-		);
-		echo form_input($data);
-		echo "<br>";
-
-	echo form_label('Media:', 'medi');
-		$data= array(
-			'name' => 'medi',
-		);
-		echo form_input($data);
-		echo "<br>";
-	
-	$data = array(
-		'name' => 'beamSword',
-		'type' => 'submit',
-		'value'=> 'Submit',
-		'class'=> 'button'
-	);
-	echo form_submit($data); 
-	?>
-	
-
-<?php echo form_close(); */
 foreach ($thedata as $row) {
-	echo form_open_multipart('Control'); 
 
+	echo form_open('Control'); 
+	echo "<img src='".$row['source']."'>";
 	echo form_label('Edit Title', 'titl')."<br>";
 		$data= array(
 			'name' => 'titl',
@@ -119,6 +77,13 @@ foreach ($thedata as $row) {
 		);
 		echo form_input($data, $row['media']);
 		echo "<br>";
+
+	$data= array(
+		'name' => 'iddd',
+		'required' => 'required',
+		'style' => 'visibility:hidden;'
+	);
+	echo form_input($data, $row['id']);
 
 	$data = array(
 		'name' => 'rincrud',
