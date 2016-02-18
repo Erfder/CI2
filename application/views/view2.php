@@ -1,5 +1,5 @@
 <div id="brown">
-	<h4>Recent Pieces</h4>
+	<h4>Recent Pieces | <?php echo anchor('View', 'Featured ') ?></h4>
 
 <article>
 <h1><?php 

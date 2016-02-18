@@ -47,7 +47,9 @@ echo form_open_multipart('Control');
 <?php echo form_close(); ?>
 
 <?php if (isset($superSpicyCurry)) {
-	echo "Successfully submitted " . $superSpicyCurry;
+	echo "<div style='width: 30%; margin: auto; background-color: #58351a; color: white;'>Successfully submitted " . $superSpicyCurry."</div>";
 }?>
+
+
 
 </div>
