@@ -92,7 +92,45 @@ echo form_open_multipart('Control');
 	?>
 	
 
-<?php echo form_close(); */print_r($thedata); ?>
+<?php echo form_close(); */
+foreach ($thedata as $row) {
+	echo form_open_multipart('Control'); 
+
+	echo form_label('Edit Title', 'titl')."<br>";
+		$data= array(
+			'name' => 'titl',
+			'required' => 'required'
+		);
+		echo form_input($data, $row['title']);
+		echo "<br>";
+
+	echo form_label('Edit Description', 'des')."<br>";
+		$data= array(
+			'name' => 'des',
+			'required' => 'required'
+		);
+		echo form_input($data, $row['desc']);
+		echo "<br>";
+
+	echo form_label('Edit Media', 'me')."<br>";
+		$data= array(
+			'name' => 'me',
+			'required' => 'required'
+		);
+		echo form_input($data, $row['media']);
+		echo "<br>";
+
+	$data = array(
+		'name' => 'rincrud',
+		'type' => 'submit',
+		'value'=> 'Update',
+		'class'=> 'button'
+	);
+	echo form_submit($data); 
+
+	echo form_close();
+}
+ ?>
 
 
 </div>
