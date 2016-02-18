@@ -30,5 +30,17 @@ class Model2 extends CI_Model {
 		$did = $this->db->get_where('users', array('username' => $sessdat))->row_array();
 		return $did;
 	}
+	public function update($newdata){
+
+	}
+	public function getinf(){
+		$this->load->library('session');
+		$sessdat = $_SESSION['session_data']['Username'];
+		$this->load->database();
+		$this->db->select('userid');
+		$did = $this->db->get_where('users', array('username' => $sessdat))->row_array();
+		$pastposts = $this->db->get_where('image', array('userid' => $did['userid']))->row_array();
+		return $pastposts;
+	}
 }
 ?>
