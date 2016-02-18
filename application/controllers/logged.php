@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Logged extends CI_Controller {
 
-	/*---------------------------------------------------For the love of god do not forget to route this page!
+	/*
 	 * Index Page for this controller.
 	 *
 	 * Maps to the following URL
@@ -41,10 +41,7 @@ class Logged extends CI_Controller {
 		);
 		$this->session->set_userdata('session_data', $sess_array);
 		//
-		$this->load->view('header');
-		$this->load->view('view1', $data2);
-		//$this->load->view('view1', $data);
-		$this->load->view('footer'); //do 'view1', data) to use the commented line
+		redirect('View', 'refresh');
 	}
 
 	
