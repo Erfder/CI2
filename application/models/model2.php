@@ -18,5 +18,17 @@ class Model2 extends CI_Model {
 			}
 		}
 	}
+	public function insertinto($datadata) {
+		$this->load->database();
+		$this->db->insert('image', $datadata);
+	}
+	public function getuser(){
+		$this->load->library('session');
+		$sessdat = $_SESSION['session_data']['Username'];
+		$this->load->database();
+		$this->db->select('userid');
+		$did = $this->db->get_where('users', array('username' => $sessdat))->row_array();
+		return $did;
+	}
 }
 ?>

@@ -26,19 +26,17 @@ class Control extends CI_Controller {
 			$ddescription = $this->input->post('descr');
 			$dmedia = $this->input->post('medi');
 
-			$this->load->database();
-			$this->db->select('userid');
-			$did = $this->db->get_where('users', array('username' => $_SESSION['session_data']['Username']));
-
+			$this->load->model('model2');
+			$did = $this->model2->getuser();
 			$dbdata = array(
-				'userid' => $did,
+				'userid' => $did['userid'],
 				'source' => "http://localhost:8888/CI/Img/".$rabbitHood,
 				'title' => $dtitle,
 				'desc' => $ddescription,
 				'media' => $dmedia
 			);
 			
-			$this->db->insert('image', $dbdata);
+	        $this->model2->insertinto($dbdata);
 
 			$this->load->view('header');
 			$this->load->view('account', $data2);
