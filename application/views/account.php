@@ -1,6 +1,6 @@
 <div id="brown">
 <h1><?php echo $_SESSION['session_data']['Username']." ";  ?></h1>
-<p>Here is your account. At this time you may only upload images. Sorry about that.</p>
+<p>Here is your account. At this time you may upload new images or update your past images.</p>
 	<?php $this->load->helper('form');
 echo form_open_multipart('Control'); 
 
@@ -50,9 +50,9 @@ echo form_open_multipart('Control');
 	echo "<div style='width: 30%; margin: auto; background-color: #58351a; color: white;'>Successfully submitted " . $superSpicyCurry."</div>";
 }
 
-echo form_open_multipart('Control'); 
+/*echo form_open_multipart('Control'); 
 
-	echo form_label('Choose an image from your computer', 'asdf')."<br>";
+	echo form_label('Edit Title', 'asdf')."<br>";
 		$data= array(
 			'name' => 'asdf',
 			'type' => 'file',
@@ -92,7 +92,7 @@ echo form_open_multipart('Control');
 	?>
 	
 
-<?php echo form_close(); ?>
+<?php echo form_close(); */print_r($thedata); ?>
 
-?>
+
 </div>

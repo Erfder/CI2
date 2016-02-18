@@ -43,7 +43,7 @@ class Control extends CI_Controller {
 			$this->load->view('footer'); 
 
 		}elseif (isset($_POST['rincrud'])) {
-			
+			$this->load->model('model2');
 			$newinfo = array(
 				'title' => $ntitle,
 				'desc' => $ndescription,
@@ -57,9 +57,12 @@ class Control extends CI_Controller {
 			$this->load->view('footer');
 
 		}else{
+			$this->load->model('model2');
 			$data3 = $this->model2->getinf();
+			$prepped['thedata'] = $data3;
+
 			$this->load->view('header');
-			$this->load->view('account', $data3);
+			$this->load->view('account', $prepped);
 			$this->load->view('footer'); 
 		}
 		
