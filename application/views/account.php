@@ -53,7 +53,7 @@ echo form_open_multipart('Control');
 foreach ($thedata as $row) {
 
 	echo form_open('Control'); 
-	echo "<img src='".$row['source']."'>";
+	echo "<img src='".$row['source']."'><br>";
 	echo form_label('Edit Title', 'titl')."<br>";
 		$data= array(
 			'name' => 'titl',
@@ -81,9 +81,9 @@ foreach ($thedata as $row) {
 	$data= array(
 		'name' => 'iddd',
 		'required' => 'required',
-		'style' => 'visibility:hidden;'
+		'style' => 'display:none;'
 	);
-	echo form_input($data, $row['id']);
+	echo form_input($data, $row['image_id']);
 
 	$data = array(
 		'name' => 'rincrud',

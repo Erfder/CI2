@@ -46,7 +46,7 @@ class Control extends CI_Controller {
 			$ntitle = $this->input->post('titl');
 			$ndescription = $this->input->post('des');
 			$nmedia = $this->input->post('me');
-			$id = post('iddd');
+			$id = $this->input->post('iddd');
 
 			$this->load->model('model2');
 			$newinfo = array(
@@ -55,20 +55,23 @@ class Control extends CI_Controller {
 				'media' => $nmedia
 			);
 			$this->model2->update($newinfo, $id);
-			$data3 = $this->model2->getinf();
+			/*$data3 = $this->model2->getinf();
+			$prepped['thedata'] = $data3;
 
 			$this->load->view('header');
-			$this->load->view('account', $data3);
-			$this->load->view('footer');
-
+			$this->load->view('account', $prepped);
+			$this->load->view('footer');*/
+			redirect('accountredirected', 'refresh');
 		}else{
-			$this->load->model('model2');
+
+			/*$this->load->model('model2');
 			$data3 = $this->model2->getinf();
 			$prepped['thedata'] = $data3;
 
 			$this->load->view('header');
 			$this->load->view('account', $prepped);
-			$this->load->view('footer'); 
+			$this->load->view('footer'); */
+			redirect('accountredirected', 'refresh');
 		}
 		
 	}
