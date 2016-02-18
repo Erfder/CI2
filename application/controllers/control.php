@@ -44,11 +44,22 @@ class Control extends CI_Controller {
 
 		}elseif (isset($_POST['rincrud'])) {
 			
-			
-			
-		}else{
+			$newinfo = array(
+				'title' => $ntitle,
+				'desc' => $ndescription,
+				'media' => $nmedia
+			);
+			$this->model2->update($newinfo);
+			$data3 = $this->model2->getinf();
+
 			$this->load->view('header');
-			$this->load->view('account');
+			$this->load->view('account', $data3);
+			$this->load->view('footer');
+
+		}else{
+			$data3 = $this->model2->getinf();
+			$this->load->view('header');
+			$this->load->view('account', $data3);
 			$this->load->view('footer'); 
 		}
 		
