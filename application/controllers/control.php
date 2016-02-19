@@ -55,22 +55,15 @@ class Control extends CI_Controller {
 				'media' => $nmedia
 			);
 			$this->model2->update($newinfo, $id);
-			/*$data3 = $this->model2->getinf();
-			$prepped['thedata'] = $data3;
-
-			$this->load->view('header');
-			$this->load->view('account', $prepped);
-			$this->load->view('footer');*/
 			redirect('accountredirected', 'refresh');
+
+		}elseif (isset($_POST['del'])){
+			$this->load->model('model2');
+			$id = $this->input->post('iddd');
+			$this->model2->del($id);
+			redirect('accountredirected', 'refresh');
+			
 		}else{
-
-			/*$this->load->model('model2');
-			$data3 = $this->model2->getinf();
-			$prepped['thedata'] = $data3;
-
-			$this->load->view('header');
-			$this->load->view('account', $prepped);
-			$this->load->view('footer'); */
 			redirect('accountredirected', 'refresh');
 		}
 		

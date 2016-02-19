@@ -44,5 +44,10 @@ class Model2 extends CI_Model {
 		$pastposts = $this->db->get_where('image', array('userid' => $did['userid']))->result_array();
 		return $pastposts;
 	}
+	public function del($id){
+		$this->load->database();
+		$this->db->where('image_id', $id);
+		$this->db->delete('image');
+	}
 }
 ?>

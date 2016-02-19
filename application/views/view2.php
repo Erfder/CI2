@@ -47,9 +47,3 @@
 </article>
 
 </div>
-
-
-
-<p>hi database should be above this line</p><p>hi</p><p>hi</p><p>hi</p><p>hi</p><p>hi</p>
-
-
