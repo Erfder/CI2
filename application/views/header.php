@@ -148,7 +148,7 @@
 		if (isset($_SESSION['session_data'])) {
 			echo anchor('View', 'Site Name ');
 		}else{
-			echo anchor('Welcome', 'Home screen ');
+			echo anchor('Welcome', 'Site Name ');
 		}
 		
 		?>
@@ -159,7 +159,7 @@
 			echo anchor('Control', 'My Account '); echo "<br>";
 			echo anchor('', 'Logout');
 		}else{
-			echo " ";
+			redirect('Welcome', 'refresh');
 		}
 		
 		?></span>

@@ -51,9 +51,11 @@ echo form_open_multipart('Control');
 }
 
 foreach ($thedata as $row) {
-
+	echo "<article>";
+	echo "<h1>".$row['title']."</h1>";
+	echo "<section>";
 	echo form_open('Control'); 
-	echo "<img src='".$row['source']."'><br>";
+	echo "<img src='".$row['source']."' style='float:left;margin:15px;'><br>";
 	echo form_label('Edit Title', 'titl')."<br>";
 		$data= array(
 			'name' => 'titl',
@@ -94,6 +96,9 @@ foreach ($thedata as $row) {
 	echo form_submit($data); 
 
 	echo form_close();
+	echo "<div id='clearfix'></div>";
+	echo "</section>";
+	echo "</article>";
 }
  ?>
 

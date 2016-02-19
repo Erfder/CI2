@@ -48,7 +48,6 @@
 
 </div>
 
-<?php print_r($imginf); ?>
 
 
 <p>hi database should be above this line</p><p>hi</p><p>hi</p><p>hi</p><p>hi</p><p>hi</p>
