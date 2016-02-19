@@ -37,10 +37,7 @@ class Control extends CI_Controller {
 			);
 			
 	        $this->model2->insertinto($dbdata);
-
-			$this->load->view('header');
-			$this->load->view('account', $data2);
-			$this->load->view('footer'); 
+	        redirect('accountredirected', 'refresh');
 
 		}elseif (isset($_POST['rincrud'])) {
 			$ntitle = $this->input->post('titl');
@@ -62,7 +59,7 @@ class Control extends CI_Controller {
 			$id = $this->input->post('iddd');
 			$this->model2->del($id);
 			redirect('accountredirected', 'refresh');
-			
+
 		}else{
 			redirect('accountredirected', 'refresh');
 		}

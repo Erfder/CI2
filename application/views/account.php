@@ -41,10 +41,7 @@ echo form_open_multipart('Control');
 		'class'=> 'button'
 	);
 	echo form_submit($data); 
-	?>
-	
-
-<?php echo form_close(); ?>
+	echo form_close(); ?>
 
 <?php if (isset($superSpicyCurry)) {
 	echo "<div style='width: 30%; margin: auto; background-color: #58351a; color: white;'>Successfully submitted " . $superSpicyCurry."</div>";
@@ -94,8 +91,18 @@ foreach ($thedata as $row) {
 		'class'=> 'button'
 	);
 	echo form_submit($data); 
-
 	echo form_close();
+
+	echo form_open('Control');
+	$data = array(
+		'name' => 'dincrud',
+		'type' => 'submit',
+		'value'=> 'Delete',
+		'class'=> 'button'
+	);
+	echo form_submit($data); 
+	echo form_close(); 
+
 	echo "<div id='clearfix'></div>";
 	echo "</section>";
 	echo "</article>";
