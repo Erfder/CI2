@@ -94,8 +94,15 @@ foreach ($thedata as $row) {
 	echo form_close();
 
 	echo form_open('Control');
+	$data= array(
+		'name' => 'iddd',
+		'required' => 'required',
+		'style' => 'display:none;'
+	);
+	echo form_input($data, $row['image_id']);
+	
 	$data = array(
-		'name' => 'dincrud',
+		'name' => 'dele',
 		'type' => 'submit',
 		'value'=> 'Delete',
 		'class'=> 'button'

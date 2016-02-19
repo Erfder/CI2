@@ -54,7 +54,7 @@ class Control extends CI_Controller {
 			$this->model2->update($newinfo, $id);
 			redirect('accountredirected', 'refresh');
 
-		}elseif (isset($_POST['del'])){
+		}elseif (isset($_POST['dele'])){
 			$this->load->model('model2');
 			$id = $this->input->post('iddd');
 			$this->model2->del($id);
