@@ -1,8 +1,10 @@
 <div id="brown">
-<h1><?php echo $_SESSION['session_data']['Username']." ";  ?></h1>
+<h1><?php echo $_SESSION['session_data']['Username']." ";  
+	 $this->load->helper('form');
+?></h1>
 
 <?php 
-	echo form_open('user');
+	echo form_open('User');
 	$data = array(
 		'u_name' => '5',
 		'type' => 'submit',
@@ -15,7 +17,7 @@
 
 
 <p>Here is your account. At this time you may upload new images or update your past images.</p>
-	<?php $this->load->helper('form');
+	<?php
 echo form_open_multipart('Control'); 
 
 	echo form_label('Choose an image from your computer', 'asdf')."<br>";
