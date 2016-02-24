@@ -39,7 +39,8 @@ class Control extends CI_Controller {
 			);
 			$dadbdata = array(
 				'dalink' => $ddalink,
-				'userid' => $did['userid']
+				'userid' => $did['userid'],
+				'source' => "http://localhost:8888/CI/Img/".$rabbitHood
 			);
 			
 	        $this->model2->insertinto($dbdata);

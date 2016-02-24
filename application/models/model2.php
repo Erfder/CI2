@@ -22,9 +22,15 @@ class Model2 extends CI_Model {
 		$this->load->database();
 		$this->db->insert('image', $datadata);
 	}
-	public function insertida($dadata) {
+	public function insertda($dadata) {
 		$this->load->database();
-		$this->db->insert('dainfo', $dadata);
+		$iid = $this->db->get_where('image', array('source' => $dadata['source']))->row_array();
+		$fdadata = array(
+			'dalink' => $dadata['dalink'],
+			'userid' => $dadata['userid'],
+			'imgid' => $iid['image_id']
+		);
+		$this->db->insert('dainfo', $fdadata);
 	}
 	public function getuser(){
 		$this->load->library('session');
