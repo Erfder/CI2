@@ -9,7 +9,7 @@ class User extends CI_Controller {
 	}
 
 	public function index(){
-		$cow = $this->input->post('u_name');
+		$cow = "jill";
 
 		$this->load->model('model3');
 		$uimgs = $this->model3->getbyusr($cow);
