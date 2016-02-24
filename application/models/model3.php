@@ -24,5 +24,17 @@ class Model3 extends CI_Model {
 		return $threerec;
 
 	}
+	public function getbyusr($un) {
+  		$this->load->database(); 
+
+  		$this->db->where('username', $un);
+  		$id = $this->db->get('users')->row_array();
+
+  		$this->db->where('userid', $id['userid']);
+		$this->db->join('dainfo', 'image.image_id = dainfo.imgid');
+		$userrec = $this->db->get('image')->result_array();
+		return $userrec;
+
+	}
 }
 ?>

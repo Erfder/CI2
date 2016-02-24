@@ -1,5 +1,9 @@
 <div id="brown">
 <h1><?php echo $_SESSION['session_data']['Username']." ";  ?></h1>
+<form action="user" method="get">
+<input type="text" name="u_name" value="jill">
+<input type="submit" value="Go to jill's page">
+</form>
 <p>Here is your account. At this time you may upload new images or update your past images.</p>
 	<?php $this->load->helper('form');
 echo form_open_multipart('Control'); 
@@ -71,7 +75,6 @@ foreach ($thedata as $row) {
 	echo form_label('Edit Description', 'des')."<br>";
 		$data= array(
 			'name' => 'des',
-			'required' => 'required'
 		);
 		echo form_input($data, $row['desc']);
 		echo "<br>";
@@ -79,7 +82,6 @@ foreach ($thedata as $row) {
 	echo form_label('Edit Media', 'me')."<br>";
 		$data= array(
 			'name' => 'me',
-			'required' => 'required'
 		);
 		echo form_input($data, $row['media']);
 		echo "<br>";

@@ -38,7 +38,7 @@ class Control extends CI_Controller {
 				'media' => $dmedia
 			);
 			$dadbdata = array(
-				'dalink' => $ddalink,
+				'dalink' => $fdalink,
 				'userid' => $did['userid'],
 				'source' => "http://localhost:8888/CI/Img/".$rabbitHood
 			);

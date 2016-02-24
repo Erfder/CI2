@@ -9,12 +9,14 @@ class Accountredirected extends CI_Controller {
 	}
 
 	public function index(){
-		$this->load->model('model2');
-		$data3 = $this->model2->getinf();
-		$prepped['thedata'] = $data3;
+		$cow = $this->input->get('u_name');
+
+		$this->load->model('model3');
+		$uimgs = $this->model3->getbyusr($cow);
+		$prepped['thedata'] = $uimgs;
 
 		$this->load->view('header');
-		$this->load->view('account', $prepped);
+		$this->load->view('userv', $prepped);
 		$this->load->view('footer');
 	}
 } 
