@@ -33,6 +33,13 @@ echo form_open_multipart('Control');
 		);
 		echo form_input($data);
 		echo "<br>";
+
+	echo form_label('DA sharing link:', 'link');
+		$data= array(
+			'name' => 'link',
+		);
+		echo form_input($data);
+		echo "<br>";
 	
 	$data = array(
 		'name' => 'beamSword',
@@ -100,7 +107,7 @@ foreach ($thedata as $row) {
 		'style' => 'display:none;'
 	);
 	echo form_input($data, $row['image_id']);
-	
+
 	$data = array(
 		'name' => 'dele',
 		'type' => 'submit',
