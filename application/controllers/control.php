@@ -25,6 +25,7 @@ class Control extends CI_Controller {
 			$dtitle = $this->input->post('ti');
 			$ddescription = $this->input->post('descr');
 			$dmedia = $this->input->post('medi');
+			$ddalink = $this->input->post('link');
 
 			$this->load->model('model2');
 			$did = $this->model2->getuser();
@@ -35,8 +36,12 @@ class Control extends CI_Controller {
 				'desc' => $ddescription,
 				'media' => $dmedia
 			);
+			$dadbdata = array(
+				'dalink' => $ddalink
+			);
 			
 	        $this->model2->insertinto($dbdata);
+	        $this->model2->insertda($dadbdata);
 	        redirect('accountredirected', 'refresh');
 
 		}elseif (isset($_POST['rincrud'])) {

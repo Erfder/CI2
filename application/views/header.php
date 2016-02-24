@@ -159,7 +159,7 @@
 			echo anchor('Control', 'My Account '); echo "<br>";
 			echo anchor('', 'Logout');
 		}else{
-			redirect('Welcome', 'refresh');
+			//redirect('Welcome', 'refresh');
 		}
 		
 		?></span>
