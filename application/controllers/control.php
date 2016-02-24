@@ -26,6 +26,7 @@ class Control extends CI_Controller {
 			$ddescription = $this->input->post('descr');
 			$dmedia = $this->input->post('medi');
 			$ddalink = $this->input->post('link');
+			$fdalink = 'http%3A%2F%2Ffav.me%2F'.substr($ddalink, 14);
 
 			$this->load->model('model2');
 			$did = $this->model2->getuser();
@@ -37,7 +38,8 @@ class Control extends CI_Controller {
 				'media' => $dmedia
 			);
 			$dadbdata = array(
-				'dalink' => $ddalink
+				'dalink' => $ddalink,
+				'userid' => $did['userid']
 			);
 			
 	        $this->model2->insertinto($dbdata);

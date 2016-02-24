@@ -22,6 +22,10 @@ class Model2 extends CI_Model {
 		$this->load->database();
 		$this->db->insert('image', $datadata);
 	}
+	public function insertida($dadata) {
+		$this->load->database();
+		$this->db->insert('dainfo', $dadata);
+	}
 	public function getuser(){
 		$this->load->library('session');
 		$sessdat = $_SESSION['session_data']['Username'];
