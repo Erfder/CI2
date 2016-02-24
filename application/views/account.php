@@ -1,9 +1,19 @@
 <div id="brown">
 <h1><?php echo $_SESSION['session_data']['Username']." ";  ?></h1>
-<form action="user" method="get">
-<input type="text" name="u_name" value="jill">
-<input type="submit" value="Go to jill's page">
-</form>
+
+<?php 
+	echo form_open('user');
+	$data = array(
+		'u_name' => '5',
+		'type' => 'submit',
+		'value'=> 'Jill',
+		'class'=> 'button'
+	);
+	echo form_submit($data); 
+	echo form_close(); 
+?>
+
+
 <p>Here is your account. At this time you may upload new images or update your past images.</p>
 	<?php $this->load->helper('form');
 echo form_open_multipart('Control'); 

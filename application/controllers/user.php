@@ -9,7 +9,7 @@ class Accountredirected extends CI_Controller {
 	}
 
 	public function index(){
-		$cow = $this->input->get('u_name');
+		$cow = $this->input->post('u_name');
 
 		$this->load->model('model3');
 		$uimgs = $this->model3->getbyusr($cow);
