@@ -30,7 +30,7 @@ class Model3 extends CI_Model {
   		$id = $this->db->get_where('users', array('username' => $cow))->row_array();
 
   		$this->db->where('image.userid', $id['userid']);
-		//$this->db->join('dainfo', 'image.image_id = dainfo.imgid');
+		$this->db->join('dainfo', 'image.image_id = dainfo.imgid', 'left');
 		$userrec = $this->db->get('image')->result_array();
 		return $userrec;
 	}

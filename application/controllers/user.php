@@ -14,6 +14,7 @@ class User extends CI_Controller {
 		$this->load->model('model3');
 		$uimgs = $this->model3->getbyusr($cow);
 		$prepped['thedata'] = $uimgs;
+		$prepped['user'] = $cow;
 
 		$this->load->view('header');
 		$this->load->view('userv', $prepped);
