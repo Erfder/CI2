@@ -41,7 +41,34 @@
 	</div>
 	<?php 
 		echo "<h3>".$imageinf['title']."</h3>";
-		echo "<p>".$imageinf['desc']."</p>";
+		echo "<p>".$imageinf['desc']."</p><br>";
+
+
+		$this->db->select('favs');
+		$this->db->where('username', $_SESSION['session_data']['Username']);
+		$favolist = $this->db->get('users')->row_array();
+		$k = $favolist['favs'];
+		if (strpos($k, '-'.$imageinf['image_id']) !== false) {
+		    echo 'already in favorites';
+		}else{
+			$attributes = array('class' => 'formfix');
+			echo form_open('Addfav', $attributes);
+			$data = array(
+				'name' => 'favid',
+				'required' => 'required',
+				'value' => $imageinf['image_id'],
+				'style' => 'display:none;'
+			);
+			echo form_input($data);
+			$data = array(
+				'name' => 'sub',
+				'type' => 'submit',
+				'value'=> 'Add to favorites',
+				'class' => 'button'
+			);
+			echo form_submit($data); 
+			echo form_close(); 
+		};
 	?>
 	<div id="clearfix"></div>
 </section>
