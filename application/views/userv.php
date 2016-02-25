@@ -104,20 +104,30 @@ $res = $this->db->get_where('dainfo', array('imgid' => $row['image_id']))->row_a
 		echo "<div id='clearfix'></div>";
 		echo "</section>";
 		echo "<script>
-			  var oembed_url = 'http://backend.deviantart.com/oembed?url=http%3A%2F%2Ffav.me%2Fd9neuen&format=jsonp&callback=?';
+			  var oembed_url = 'http://backend.deviantart.com/oembed?url=".$res['dalink']."&format=jsonp&callback=?';
 			  $.getJSON(oembed_url, function(data) {
 			    document.getElementById('image').src = data.url;
+			    document.getElementById('blue').innerHTML = 'This image was uploaded to ' + data.provider_name + '.';
+			    document.getElementById('yellow').innerHTML = 'This person's username for the site is ' + data.author_name + '.';
+			    document.getElementById('red').href = data.author_url;
 			  });
 			</script>
+			<div style='background-color: #f1eed9; min-height: 120px; padding:5px; max-width:60%; margin-left: 15px;'>
 			<div class='thumb'></div>
 			<div class='thumb'>
 				<div class='thumbinner'>
 					<img id='image' src=''>
 				</div>
 			</div>
-			<p>This image was uploaded to <a href='https://www.deviantart.com' >Deviant Art.</a></p>
+			<p id='blue'><a href='https://www.deviantart.com' >Deviant Art.</a></p>
+			<p id='yellow'></p>
+			Why don't you <a id='red' href=''>visit them </a>there?
+			
+			<br></div>
+			<br>
 			<div id='clearfix'></div>";
 		echo "</article>";
+		echo "<br>";
 	}
 }
 ?>
