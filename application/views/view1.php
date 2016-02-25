@@ -43,13 +43,12 @@
 		echo "<h3>".$imageinf['title']."</h3>";
 		echo "<p>".$imageinf['desc']."</p><br>";
 
-
 		$this->db->select('favs');
 		$this->db->where('username', $_SESSION['session_data']['Username']);
 		$favolist = $this->db->get('users')->row_array();
 		$k = $favolist['favs'];
 		if (strpos($k, '-'.$imageinf['image_id']) !== false) {
-		    echo 'This is in your favorites';
+		    echo '<h6 class="button">This is in your favorites</h6>';
 		}else{
 			$attributes = array('class' => 'formfix');
 			echo form_open('Addfav', $attributes);

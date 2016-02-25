@@ -108,7 +108,7 @@ $res = $this->db->get_where('dainfo', array('imgid' => $row['image_id']))->row_a
 			  $.getJSON(oembed_url, function(data) {
 			    document.getElementById('image').src = data.url;
 			    document.getElementById('blue').innerHTML = 'This image was uploaded to ' + data.provider_name + '.';
-			    document.getElementById('yellow').innerHTML = 'This person's username for the site is ' + data.author_name + '.';
+			    document.getElementById('yellow').innerHTML = 'This persons username for the site is ' + data.author_name + '.';
 			    document.getElementById('red').href = data.author_url;
 			  });
 			</script>
