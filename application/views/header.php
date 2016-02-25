@@ -4,6 +4,7 @@
 		<link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
         <title>CodeIgniter Tutorial</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <style type="text/css">
 	        body{
 	        	background-color: #f1eed9;
@@ -141,7 +142,7 @@
 	    		font-weight: 600;
 	    	}
 	    	.buttonash1{
-	    		background-color: #58351a;
+	    		background-color: transparent;
 	    		color: white;
 	    		padding: 5px;
 	    		font-family: 'Amatic SC', cursive;
@@ -158,17 +159,28 @@
 			    cursor:pointer;
 			}
 			.thumb{
-				width:100px; 
-				height: 100px; 
 				background-color: #000; 
 				float: left; 
-				display: flex; 
-				align-items: center; 
-				overflow: hidden; 
 				margin: 5px;
 			}
 			.thumb:first-of-type{
 				display: none;
+			}
+			.thumbinner{
+				width:100px; 
+				height: 100px;
+				display: flex; 
+				overflow: hidden;
+				align-items: center;  
+			}
+			h6{
+				border: none;
+	    		background-color: #58351a;
+	    		color: white;
+	    		width: 120px;
+	    		padding: 5px;
+	    		float: left;
+	    		font-weight: normal;
 			}
         </style>
 </head>

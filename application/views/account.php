@@ -126,8 +126,32 @@ $dog = $this->db->get_where('users', array('username' => $_SESSION['session_data
 echo "<h2 style='margin-top: 30px;'>Favorited Images: <br>";
 $favids = explode( '-', $dog['favs']);
 foreach ($favids as $img) {
+	$this->db->join('users', 'users.userid = image.userid', 'left');
 	$fish = $this->db->get_where('image', array('image_id' => $img))->row_array();
-	echo "<div class='thumb'><a href='Accountredirected'><img src='".$fish['source']."'></a></div>";
+
+	echo "<div class='thumb'><div class='thumbinner'><img src='".$fish['source']."'></div>";
+
+		$this->load->helper('form'); 
+	 	$attributes = array('class' => 'formfix');
+		echo form_open('user', $attributes);
+		$data= array(
+			'name' => 'u_name',
+			'required' => 'required',
+			'value' => $fish['username'],
+			'style' => 'display:none;'
+		);
+		echo form_input($data);
+		$data = array(
+			'name' => 'sub',
+			'type' => 'submit',
+			'value'=> $fish['username'],
+			'class' => 'buttonash1',
+			'style' => 'font-size:20px;'
+		);
+		echo form_submit($data); 
+		echo form_close(); 
+
+	echo"</div>";
 };
 echo "<div id='clearfix'></div></h2>"
 

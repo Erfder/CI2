@@ -35,7 +35,7 @@ $this->db->select('favs');
 		$favolist = $this->db->get('users')->row_array();
 		$k = $favolist['favs'];
 		if (strpos($k, '-'.$imginf[0]['image_id']) !== false) {
-		    echo 'This is in your favorites';
+		    echo '<h6 class="button">This is in your favorites</h6>';
 		}else{
 			$attributes = array('class' => 'formfix');
 			echo form_open('Addfav', $attributes);
@@ -109,7 +109,7 @@ $this->db->select('favs');
 		$favolist = $this->db->get('users')->row_array();
 		$k = $favolist['favs'];
 		if (strpos($k, '-'.$imginf[1]['image_id']) !== false) {
-		    echo 'This is in your favorites';
+		    echo '<h6 class="button">This is in your favorites</h6>';
 		}else{
 			$attributes = array('class' => 'formfix');
 			echo form_open('Addfav', $attributes);
@@ -183,7 +183,7 @@ $this->db->select('favs');
 		$favolist = $this->db->get('users')->row_array();
 		$k = $favolist['favs'];
 		if (strpos($k, '-'.$imginf[2]['image_id']) !== false) {
-		    echo 'This is in your favorites';
+		    echo '<h6 class="button">This is in your favorites</h6>';
 		}else{
 			$attributes = array('class' => 'formfix');
 			echo form_open('Addfav', $attributes);

@@ -19,6 +19,7 @@ class Addfav extends CI_Controller {
 		$this->load->model('model1');
 		$this->model1->addf($inf);
 		$data['userinf'] = $this->db->get_where('users', array('userid' => $this->input->post('ufid')))->row_array();
+		
 
 		$this->load->view('header');
 		$this->load->view('view1', $data);
