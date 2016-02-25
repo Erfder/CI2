@@ -3,8 +3,25 @@
 
 <article>
 <h1><?php 
-    echo $imginf[0]['username'];
- ?></h1>
+ $this->load->helper('form'); 
+ 	$attributes = array('class' => 'formfix');
+	echo form_open('user', $attributes);
+	$data= array(
+		'name' => 'u_name',
+		'required' => 'required',
+		'value' => $imginf[0]['username'],
+		'style' => 'display:none;'
+	);
+	echo form_input($data);
+	$data = array(
+		'name' => 'sub',
+		'type' => 'submit',
+		'value'=> $imginf[0]['username'],
+		'class' => 'buttonash1'
+	);
+	echo form_submit($data); 
+	echo form_close(); 
+?></h1>
 <section>
 	<div id="imgcont">
 		<?php echo "<img src='".$imginf[0]['source']."' alt='image 1'>";  ?>
@@ -18,8 +35,25 @@
 
 <article>
 <h1><?php 
-    echo $imginf[1]['username'];
- ?></h1>
+ $this->load->helper('form'); 
+ 	$attributes = array('class' => 'formfix');
+	echo form_open('user', $attributes);
+	$data= array(
+		'name' => 'u_name',
+		'required' => 'required',
+		'value' => $imginf[1]['username'],
+		'style' => 'display:none;'
+	);
+	echo form_input($data);
+	$data = array(
+		'name' => 'sub',
+		'type' => 'submit',
+		'value'=> $imginf[1]['username'],
+		'class' => 'buttonash1'
+	);
+	echo form_submit($data); 
+	echo form_close(); 
+?></h1>
 <section>
 	<div id="imgcont">
 		<?php echo "<img src='".$imginf[1]['source']."' alt='image 1'>";  ?>
@@ -33,8 +67,25 @@
 
 <article>
 <h1><?php 
-    echo $imginf[2]['username'];
- ?></h1>
+ $this->load->helper('form'); 
+ 	$attributes = array('class' => 'formfix');
+	echo form_open('user', $attributes);
+	$data= array(
+		'name' => 'u_name',
+		'required' => 'required',
+		'value' => $imginf[2]['username'],
+		'style' => 'display:none;'
+	);
+	echo form_input($data);
+	$data = array(
+		'name' => 'sub',
+		'type' => 'submit',
+		'value'=> $imginf[2]['username'],
+		'class' => 'buttonash1'
+	);
+	echo form_submit($data); 
+	echo form_close(); 
+?></h1>
 <section>
 	<div id="imgcont">
 		<?php echo "<img src='".$imginf[2]['source']."' alt='image 1'>";  ?>

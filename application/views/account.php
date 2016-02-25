@@ -1,26 +1,5 @@
 <div id="brown">
 <h1><?php echo $_SESSION['session_data']['Username']." "; $this->load->helper('form'); ?></h1>
-
-<?php 
-	echo form_open('user');
-	$data= array(
-		'name' => 'u_name',
-		'required' => 'required',
-		'value' => 'jill',
-		//'style' => 'display:none;'
-	);
-	echo form_input($data);
-	$data = array(
-		'name' => 'sub',
-		'type' => 'submit',
-		'value'=> 'Go to jill',
-		'class'=> 'button'
-	);
-	echo form_submit($data); 
-	echo form_close(); 
-?>
-
-
 <p>Here is your account. At this time you may upload new images or update your past images.</p>
 	<?php $this->load->helper('form');
 echo form_open_multipart('Control'); 

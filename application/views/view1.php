@@ -1,8 +1,26 @@
 <div id="brown">
 	<h4>Featured Pieces | <?php echo anchor('Vieworg', 'Recent ') ?></h4>
 <article>
-<h1><?php echo $userinf['username'];
- ?></h1>
+<h1><?php 
+ $this->load->helper('form'); 
+ 	$attributes = array('class' => 'formfix');
+	echo form_open('user', $attributes);
+	$data= array(
+		'name' => 'u_name',
+		'required' => 'required',
+		'value' => $userinf['username'],
+		'style' => 'display:none;'
+	);
+	echo form_input($data);
+	$data = array(
+		'name' => 'sub',
+		'type' => 'submit',
+		'value'=> $userinf['username'],
+		'class' => 'buttonash1'
+	);
+	echo form_submit($data); 
+	echo form_close(); 
+?></h1>
 <!---<section>
 	<div id="imgcont">
 		<img src="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg" alt="image 1">

@@ -140,6 +140,23 @@
 	    		color: inherit;
 	    		font-weight: 600;
 	    	}
+	    	.buttonash1{
+	    		background-color: #58351a;
+	    		color: white;
+	    		padding: 5px;
+	    		font-family: 'Amatic SC', cursive;
+	    		font-weight: 400;
+	    		text-align: center;
+	    		font-size: 30px;
+	    		margin-top: 0;
+	    		border: none;
+	    	}
+	    	.formfix{
+	    		margin-top: 0;
+	    	}
+	    	input[type=submit]{
+			    cursor:pointer;
+			}
         </style>
 </head>
 <body>
