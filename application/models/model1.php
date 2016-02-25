@@ -9,5 +9,16 @@ class Model1 extends CI_Model {
 			$this->db->insert('users', $data);
 		}
 	}
+	public function addf($inf){
+		$this->load->database(); 
+		$cats = $this->db->get_where('users', array('username' => $inf['favingusr']))->row_array();
+		$cats['favs'] .= "-";
+		$cats['favs'] .= $inf['imgid'];
+		$data = array(
+           'favs' => $cats['favs']
+        );
+		$this->db->where('username', $inf['favingusr']);
+		$this->db->update('users', $data);
+	}
 }
 ?>

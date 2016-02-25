@@ -61,6 +61,20 @@
 			);
 			echo form_input($data);
 			$data = array(
+				'name' => 'ufid',
+				'required' => 'required',
+				'value' => $imageinf['userid'],
+				'style' => 'display:none;'
+			);
+			echo form_input($data);
+			$data = array(
+				'name' => 'usrn',
+				'required' => 'required',
+				'value' => $_SESSION['session_data']['Username'],
+				'style' => 'display:none;'
+			);
+			echo form_input($data);
+			$data = array(
 				'name' => 'sub',
 				'type' => 'submit',
 				'value'=> 'Add to favorites',
