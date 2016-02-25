@@ -24,4 +24,4 @@ class Addfav extends CI_Controller {
 		$this->load->view('view1', $data);
 		$this->load->view('footer'); 
 	} 
-?>
+}
