@@ -157,6 +157,19 @@
 	    	input[type=submit]{
 			    cursor:pointer;
 			}
+			.thumb{
+				width:100px; 
+				height: 100px; 
+				background-color: #000; 
+				float: left; 
+				display: flex; 
+				align-items: center; 
+				overflow: hidden; 
+				margin: 5px;
+			}
+			.thumb:first-of-type{
+				display: none;
+			}
         </style>
 </head>
 <body>

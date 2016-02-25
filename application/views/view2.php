@@ -28,6 +28,7 @@
 	</div>
 	<h3><?php echo $imginf[0]['title']; ?></h3>
 	<p><?php echo $imginf[0]['desc']; ?></p>
+	<p><?php echo $imginf[0]['media']; ?></p>
 	<?php 
 $this->db->select('favs');
 		$this->db->where('username', $_SESSION['session_data']['Username']);
@@ -101,6 +102,7 @@ $this->db->select('favs');
 	</div>
 	<h3><?php echo $imginf[1]['title']; ?></h3>
 	<p><?php echo $imginf[1]['desc']; ?></p>
+	<p><?php echo $imginf[1]['media']; ?></p>
 	<?php 
 $this->db->select('favs');
 		$this->db->where('username', $_SESSION['session_data']['Username']);
@@ -174,6 +176,7 @@ $this->db->select('favs');
 	</div>
 	<h3><?php echo $imginf[2]['title']; ?></h3>
 	<p><?php echo $imginf[2]['desc']; ?></p>
+	<p><?php echo $imginf[2]['media']; ?></p>
 	<?php 
 $this->db->select('favs');
 		$this->db->where('username', $_SESSION['session_data']['Username']);

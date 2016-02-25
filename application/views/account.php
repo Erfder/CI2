@@ -1,5 +1,5 @@
 <div id="brown">
-<h1><?php echo $_SESSION['session_data']['Username']." "; $this->load->helper('form'); ?></h1>
+<h1><?php echo $_SESSION['session_data']['Username']." ";?></h1>
 <p>Here is your account. At this time you may upload new images or update your past images.</p>
 	<?php $this->load->helper('form');
 echo form_open_multipart('Control'); 
@@ -37,6 +37,7 @@ echo form_open_multipart('Control');
 	echo form_label('DA sharing link:', 'link');
 		$data= array(
 			'name' => 'link',
+			'type' => 'url',
 		);
 		echo form_input($data);
 		echo "<br>";
@@ -119,7 +120,32 @@ foreach ($thedata as $row) {
 	echo "</section>";
 	echo "</article>";
 }
+$this->load->database(); 
+$dog = $this->db->get_where('users', array('username' => $_SESSION['session_data']['Username']))->row_array();
+//print_r($dog);
+echo "<h2 style='margin-top: 30px;'>Favorited Images: <br>";
+$favids = explode( '-', $dog['favs']);
+foreach ($favids as $img) {
+	$fish = $this->db->get_where('image', array('image_id' => $img))->row_array();
+	echo "<div class='thumb'><a href='Accountredirected'><img src='".$fish['source']."'></a></div>";
+};
+echo "<div id='clearfix'></div></h2>"
+
+
+
+
+
+
+
  ?>
+
+
+
+
+
+
+
+
 
 
 </div>
