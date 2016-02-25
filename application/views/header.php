@@ -116,7 +116,7 @@
 	    		border: none;
 	    		background-color: #58351a;
 	    		color: white;
-	    		width: 80px;
+	    		min-width: 80px;
 	    		padding: 5px;
 	    		margin-top: 20px;
 	    		margin-left: 10px;

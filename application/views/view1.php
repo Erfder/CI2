@@ -49,7 +49,7 @@
 		$favolist = $this->db->get('users')->row_array();
 		$k = $favolist['favs'];
 		if (strpos($k, '-'.$imageinf['image_id']) !== false) {
-		    echo 'already in favorites';
+		    echo 'This is in your favorites';
 		}else{
 			$attributes = array('class' => 'formfix');
 			echo form_open('Addfav', $attributes);
